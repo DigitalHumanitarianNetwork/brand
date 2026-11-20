@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Humanitarian Network — Brand</title>
+<meta name="description" content="Brand guidance and downloadable assets for the Digital Humanitarian Network. Use of these assets requires explicit approval from the Digital Humanitarian Network.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<style>
+  :root{
+    --gray:#434341;
+    --red:#E5352B;
+    --orange:#E8501D;
+    --teal:#059698;
+    --yellow:#F7A823;
+    --orange-l:#F39317;
+    --teal-l:#00ACA5;
+    --yellow-l:#FFDE20;
+    --pink:#EB6730;
+    --ink:#262625;
+    --paper:#FFFFFF;
+    --cloud:#F4F4F2;
+    --line:#E3E3E0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.6;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{background:var(--gray);position:sticky;top:0;z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  header .brandline{display:flex;align-items:center;gap:14px}
+  header .brandline img{height:34px;width:auto}
+  header .brandline span{color:#fff;font-weight:600;letter-spacing:.02em;font-size:15px}
+  header nav a{color:#fff;opacity:.85;font-size:14px;margin-left:20px}
+  header nav a:hover{opacity:1;text-decoration:none}
+  @media (max-width:640px){header nav{display:none}}
+
+  /* Hero */
+  .hero{
+    background:var(--gray) url("DHN_background_blue.jpg") center/cover no-repeat;
+    color:#fff;padding:88px 0 76px;
+  }
+  .hero img{height:74px;width:auto;margin-bottom:28px}
+  .hero h1{font-size:clamp(30px,5vw,46px);line-height:1.15;font-weight:700;max-width:640px}
+  .hero p{margin-top:16px;font-size:18px;max-width:560px;opacity:.95}
+
+  /* Approval notice */
+  .notice{background:var(--yellow-l);border-bottom:4px solid var(--yellow)}
+  .notice .wrap{padding-top:26px;padding-bottom:26px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-start}
+  .notice p{flex:1 1 280px}
+  .notice .badge{flex:none;background:var(--gray);color:#fff;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:4px;margin-top:2px}
+  .notice p{font-size:16.5px;max-width:760px}
+  .notice a{font-weight:600;color:var(--ink)}
+
+  /* Sections */
+  section{padding:64px 0}
+  section.alt{background:var(--cloud)}
+  h2{font-size:26px;font-weight:700;color:var(--gray);margin-bottom:8px}
+  h2::after{content:"";display:block;width:44px;height:4px;background:var(--red);margin-top:10px;border-radius:2px}
+  .lead{max-width:680px;margin:14px 0 30px;color:#555550}
+
+  /* Download cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+  .card .preview{height:130px;display:flex;align-items:center;justify-content:center;padding:18px;background:var(--cloud)}
+  .card .preview.dark{background:var(--gray)}
+  .card .preview img{max-height:100%;width:auto;max-width:100%}
+  .card .preview.fill{padding:0}
+  .card .preview.fill img{width:100%;height:100%;object-fit:cover}
+  .card .body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
+  .card h3{font-size:15px;color:var(--gray);margin-bottom:4px}
+  .card .meta{font-size:12.5px;color:#8a8a85;margin-bottom:12px}
+  .card .links{margin-top:auto;font-size:13.5px;display:flex;flex-wrap:wrap;gap:4px 12px}
+  .card .links a{font-weight:600}
+
+  .packrow{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+  .pack{
+    display:inline-flex;align-items:center;gap:10px;background:var(--gray);color:#fff;
+    padding:13px 20px;border-radius:8px;font-weight:600;font-size:15px;
+  }
+  .pack:hover{background:var(--ink);text-decoration:none}
+  .pack small{font-weight:400;opacity:.75}
+  .pack.ghost{background:#fff;color:var(--gray);border:1.5px solid var(--gray)}
+  .pack.ghost:hover{background:var(--gray);color:#fff}
+
+  /* Swatches */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  .swatch{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .swatch .chip{height:84px}
+  .swatch .body{padding:10px 12px}
+  .swatch .name{font-size:13.5px;font-weight:600;color:var(--gray)}
+  .swatch .hex{font-size:12.5px;color:#8a8a85;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .swgroup{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a8a85;margin:26px 0 12px}
+
+  /* Type */
+  .typecard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;margin-bottom:16px}
+  .typecard .tname{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+  .typecard .sample{font-size:24px;color:var(--ink)}
+  .typecard .note{font-size:14px;color:#555550;margin-top:8px}
+
+  /* Rules */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:720px){.rules{grid-template-columns:1fr}}
+  .rule{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:8px;padding:18px 20px}
+  .rule.no{border-left-color:var(--red)}
+  .rule h3{font-size:15.5px;margin-bottom:6px;color:var(--gray)}
+  .rule p{font-size:14.5px;color:#555550}
+  .rule ul{margin:6px 0 0 18px;font-size:14.5px;color:#555550}
+
+  /* CTA */
+  .cta{background:var(--gray) url("DHN_background_darkred.jpg") center/cover no-repeat;color:#fff;text-align:center;padding:72px 0}
+  .cta h2{color:#fff}
+  .cta h2::after{background:var(--yellow);margin-left:auto;margin-right:auto}
+  .cta p{max-width:560px;margin:16px auto 28px;font-size:17px;opacity:.95}
+  .cta a.button{display:inline-block;background:#fff;color:var(--gray);font-weight:700;padding:14px 28px;border-radius:8px;font-size:16px}
+  .cta a.button:hover{background:var(--yellow-l);text-decoration:none}
+
+  footer{background:var(--ink);color:#bdbdb8;padding:34px 0;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+  footer a{color:#fff}
+  footer .flinks a{margin-left:18px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandline">
+      <img src="DHN_LOGO_WHITE.png" alt="Digital Humanitarian Network logo">
+      <span>Brand resources</span>
+    </div>
+    <nav>
+      <a href="#logo">Logo</a>
+      <a href="#colours">Colours</a>
+      <a href="#typography">Typography</a>
+      <a href="#backgrounds">Backgrounds</a>
+      <a href="#guide">Style guide</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <img src="DHN_LOGO_WHITE.png" alt="Digital Humanitarian Network">
+    <h1>The Digital Humanitarian Network brand</h1>
+    <p>Guidance and official assets for representing the Digital Humanitarian Network (DHN) consistently, in print and online.</p>
+  </div>
+</div>
+
+<div class="notice">
+  <div class="wrap">
+    <span class="badge">Approval required</span>
+    <p>These assets may only be used with the explicit approval of the Digital Humanitarian Network. To request permission, email
+    <a href="mailto:contact@digitalhumanitarians.com">contact@digitalhumanitarians.com</a> describing what you would like to use and where.</p>
+  </div>
+</div>
+
+<section id="logo">
+  <div class="wrap">
+    <h2>Logo</h2>
+    <p class="lead">The brand consists of the &ldquo;DH&rdquo; symbol and the Network wordmark with its designation. The compact horizontal signature (A) is the default and preferred version. Never redraw, re-proportion or modify the artwork.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="preview"><img src="DHN_LOGO.png" alt="DHN main logo, horizontal signature"></div>
+        <div class="body">
+          <h3>Main signature (A)</h3>
+          <div class="meta">Default logo, for light backgrounds</div>
+          <div class="links">
+            <a href="DHN_LOGO.png" download>PNG</a>
+            <a href="DHN_LOGO_300dpi.png" download>PNG 300 dpi</a>
+            <a href="DHN_LOGO.jpg" download>JPG</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview dark"><img src="DHN_LOGO_WHITE.png" alt="DHN logo, white version"></div>
+        <div class="body">
+          <h3>White version</h3>
+          <div class="meta">For charcoal, colour and image backgrounds</div>
+          <div class="links">
+            <a href="DHN_LOGO_WHITE.png" download>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview"><img src="DHN_SYMBOL.png" alt="DH symbol"></div>
+        <div class="body">
+          <h3>Symbol</h3>
+          <div class="meta">&ldquo;DH&rdquo; mark, for tight spaces</div>
+          <div class="links">
+            <a href="DHN_SYMBOL.png" download>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview"><img src="DHN_LOGO_red.png" alt="DHN logo, colour versions"></div>
+        <div class="body">
+          <h3>Colour versions</h3>
+          <div class="meta">Red, orange, blue and yellow variants</div>
+          <div class="links">
+            <a href="DHN_LOGO_red.png" download>Red</a>
+            <a href="DHN_LOGO_orange.png" download>Orange</a>
+            <a href="DHN_LOGO_blue.png" download>Blue</a>
+            <a href="DHN_LOGO_yellow.png" download>Yellow</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview"><img src="DHN_SYMBOL.png" alt="Vector and print formats"></div>
+        <div class="body">
+          <h3>Vector &amp; print</h3>
+          <div class="meta">Production formats for designers and print</div>
+          <div class="links">
+            <a href="DHN_LOGO.eps" download>EPS</a>
+            <a href="DHN_LOGO.ai" download>AI</a>
+            <a href="DHN_LOGO.pdf" download>PDF</a>
+            <a href="DHN_LOGO.tif" download>TIF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="packrow">
+      <a class="pack" href="DHN_logos_pack.zip" download>Download full logo pack <small>ZIP &middot; all formats</small></a>
+    </div>
+  </div>
+</section>
+
+<section id="colours" class="alt">
+  <div class="wrap">
+    <h2>Colours</h2>
+    <p class="lead">Reproduce the colours as faithfully as possible on each surface. The identity colours anchor the brand; the secondary palette supports it.</p>
+    <div class="swgroup">Identity colours</div>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#434341"></div><div class="body"><div class="name">DHN Gray</div><div class="hex">#434341 &middot; 67/67/65</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid var(--line)"></div><div class="body"><div class="name">White</div><div class="hex">#FFFFFF</div></div></div>
+    </div>
+    <div class="swgroup">Secondary palette</div>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#E5352B"></div><div class="body"><div class="name">Red</div><div class="hex">#E5352B &middot; 229/53/43</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#E8501D"></div><div class="body"><div class="name">Orange</div><div class="hex">#E8501D &middot; 232/80/29</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#059698"></div><div class="body"><div class="name">Blue-green</div><div class="hex">#059698 &middot; 5/150/152</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#F7A823"></div><div class="body"><div class="name">Yellow</div><div class="hex">#F7A823 &middot; 247/168/35</div></div></div>
+    </div>
+    <div class="swgroup">Lighter set</div>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#EB6730"></div><div class="body"><div class="name">Red/pink</div><div class="hex">#EB6730 &middot; 235/103/48</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#F39317"></div><div class="body"><div class="name">Orange</div><div class="hex">#F39317 &middot; 243/147/23</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#00ACA5"></div><div class="body"><div class="name">Blue-green</div><div class="hex">#00ACA5 &middot; 0/172/165</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#FFDE20"></div><div class="body"><div class="name">Yellow</div><div class="hex">#FFDE20 &middot; 255/222/32</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="typography">
+  <div class="wrap">
+    <h2>Typography</h2>
+    <p class="lead">Two typefaces carry the DHN voice. The font files are not included here; the samples below use a system sans-serif stand-in.</p>
+    <div class="typecard">
+      <div class="tname">BetaSans Bold &middot; Headings</div>
+      <div class="sample" style="font-weight:700">Digital Humanitarian Network</div>
+      <div class="note">Used for headings and emphasis. Shown here in a system sans-serif stand-in.</div>
+    </div>
+    <div class="typecard">
+      <div class="tname">Clan OT &middot; Book, Medium, Bold &middot; Text</div>
+      <div class="sample">Digital Humanitarian Network</div>
+      <div class="note">Used for body text in Book, Medium and Bold weights. Shown here in a system sans-serif stand-in.</div>
+    </div>
+  </div>
+</section>
+
+<section id="backgrounds" class="alt">
+  <div class="wrap">
+    <h2>Backgrounds</h2>
+    <p class="lead">Four faceted backgrounds for covers, banners and slides. Each is available as a web-ready JPG and a high-resolution print PNG.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="preview fill"><img src="DHN_background_green.jpg" alt="Faceted background, green"></div>
+        <div class="body">
+          <h3>Green facets</h3>
+          <div class="links">
+            <a href="DHN_background_green.jpg" download>JPG</a>
+            <a href="DHN_background_green.png" download>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview fill"><img src="DHN_background_orange.jpg" alt="Faceted background, orange"></div>
+        <div class="body">
+          <h3>Orange facets</h3>
+          <div class="links">
+            <a href="DHN_background_orange.jpg" download>JPG</a>
+            <a href="DHN_background_orange.png" download>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview fill"><img src="DHN_background_blue.jpg" alt="Faceted background, blue"></div>
+        <div class="body">
+          <h3>Blue facets</h3>
+          <div class="links">
+            <a href="DHN_background_blue.jpg" download>JPG</a>
+            <a href="DHN_background_blue.png" download>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview fill"><img src="DHN_background_darkred.jpg" alt="Faceted background, dark red"></div>
+        <div class="body">
+          <h3>Dark red facets</h3>
+          <div class="links">
+            <a href="DHN_background_darkred.jpg" download>JPG</a>
+            <a href="DHN_background_darkred.png" download>PNG</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="packrow">
+      <a class="pack" href="DHN_backgrounds_pack.zip" download>Download all backgrounds <small>ZIP &middot; JPG + PNG + AI</small></a>
+    </div>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap">
+    <h2>Using the brand</h2>
+    <p class="lead">The essentials below come from the DH Network style guide. When in doubt, follow the guide.</p>
+    <div class="rules">
+      <div class="rule">
+        <h3>Give the logo room</h3>
+        <p>Keep a clear space around the signature. No text, rules, images or other graphic elements may enter it. Wherever possible, use more than the minimum.</p>
+      </div>
+      <div class="rule">
+        <h3>Respect minimum sizes</h3>
+        <p>In print, the signature with designation should never be smaller than 34&nbsp;mm wide; the symbol alone never smaller than 8&nbsp;mm.</p>
+      </div>
+      <div class="rule">
+        <h3>Use approved backgrounds</h3>
+        <p>Place the logo on white, DHN Gray, the secondary palette colours or the faceted pattern backgrounds. On photographs, protect legibility; use the white version on dark or busy images.</p>
+      </div>
+      <div class="rule no">
+        <h3>Never alter the logo</h3>
+        <ul>
+          <li>Don&rsquo;t recolour it or use unapproved colours</li>
+          <li>Don&rsquo;t remove elements or set it in outline</li>
+          <li>Don&rsquo;t stretch, distort or rotate it</li>
+          <li>Don&rsquo;t change the lettering or the proportions between elements</li>
+          <li>Don&rsquo;t add frames or place elements inside the protection area</li>
+        </ul>
+      </div>
+    </div>
+    <div class="packrow">
+      <a class="pack ghost" href="DHN-Style-Guide.pdf" download>Download the full style guide <small>PDF</small></a>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Request permission to use these assets</h2>
+    <p>Use of the Digital Humanitarian Network name, logo and brand assets requires the Network&rsquo;s explicit approval. Tell us what you need and how you plan to use it.</p>
+    <a class="button" href="mailto:contact@digitalhumanitarians.com">contact@digitalhumanitarians.com</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; Digital Humanitarian Network</div>
+    <div class="flinks">
+      <a href="https://digitalhumanitarians.com">digitalhumanitarians.com</a>
+      <a href="mailto:contact@digitalhumanitarians.com">contact@digitalhumanitarians.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+        </html>
