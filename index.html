@@ -35,9 +35,9 @@
 
   /* Header */
   header{background:var(--gray);position:sticky;top:0;z-index:10}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
   header .brandline{display:flex;align-items:center;gap:14px}
-  header .brandline img{height:34px;width:auto}
+  header .brandline img{height:56px;width:auto;max-width:none}
   header .brandline span{color:#fff;font-weight:600;letter-spacing:.02em;font-size:15px}
   header nav a{color:#fff;opacity:.85;font-size:14px;margin-left:20px}
   header nav a:hover{opacity:1;text-decoration:none}
@@ -48,7 +48,8 @@
     background:var(--gray) url("DHN_background_blue.jpg") center/cover no-repeat;
     color:#fff;padding:88px 0 76px;
   }
-  .hero img{height:74px;width:auto;margin-bottom:28px}
+  .hero img{height:128px;width:auto;max-width:none;margin-bottom:32px}
+  @media (max-width:640px){header .brandline img{height:44px}.hero img{height:92px}}
   .hero h1{font-size:clamp(30px,5vw,46px);line-height:1.15;font-weight:700;max-width:640px}
   .hero p{margin-top:16px;font-size:18px;max-width:560px;opacity:.95}
 
@@ -382,3 +383,4 @@
 
 </body>
 </html>
+
